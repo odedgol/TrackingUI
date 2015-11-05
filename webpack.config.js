@@ -1,7 +1,7 @@
 module.exports = {
   entry:{
     main:[
-    './src/main.js'
+      './src/main.js'
     ]
   },
   output: {
@@ -12,7 +12,10 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader:'babel'
+        loader:'babel',
+        query: {
+          presets:['es2015','react']
+        }
       }
     ]
   }
